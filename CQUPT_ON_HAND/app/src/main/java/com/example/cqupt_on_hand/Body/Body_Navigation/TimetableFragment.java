@@ -14,20 +14,28 @@ import android.widget.TextView;
 
 import com.example.cqupt_on_hand.Body.Body_Navigation.Timetable_Mess.WeekFragment;
 import com.example.cqupt_on_hand.Body.Body_Navigation.Timetable_Mess.WeekpagerAdapter;
+import com.example.cqupt_on_hand.Mess.HttpConnectionUtil;
+import com.example.cqupt_on_hand.Mess.JsonAnalyze;
 import com.example.cqupt_on_hand.R;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static android.content.ContentValues.TAG;
+import static com.example.cqupt_on_hand.Register.Register.StuNum;
+
 
 /**
  * Created by 郝书逸 on 2018/5/25.
  */
 
 public class TimetableFragment extends Fragment {
+    static Map<String, String> map = new HashMap<String, String>();
     private ViewPager viewpager;
     private TabLayout tablayout;
+    public static JsonAnalyze jsonAnalyze =JsonAnalyze.newInstance();
     private List<Fragment> fragments;
     private  String[]titles = {"第一周","第二周","第三周","第四周","第五周","第六周","第七周","第八周","第九周","第十周","第十一周","第十二周","第十三周","第十四周","第十五周","第十六周","第十七周","第十八周","第十九周","第二十周","第二十一周","第二十二周","第二十三周","第二十四周","第二十五周"};
     private WeekpagerAdapter adapter;
@@ -49,7 +57,11 @@ public class TimetableFragment extends Fragment {
         adapter = new WeekpagerAdapter(getChildFragmentManager(),fragments);
         adapter.setTitles(titles);
         tablayout.setTabMode(TabLayout.MODE_SCROLLABLE);
+        map.put("stu_num", StuNum);
+        map.put("forceFetch","false");
+        jsonAnalyze.parseCourseListJson(HttpConnectionUtil.getHttp().postRequset("https://wx.idsbllp.cn/api/kebiao\n",map));
         viewpager.setAdapter(adapter);
+        viewpager.setCurrentItem (Integer.valueOf(jsonAnalyze.getCourses().get(0).getNowWeek()).intValue()-1);
         tablayout.setupWithViewPager(viewpager);
 
     }

@@ -25,6 +25,7 @@ import javax.net.ssl.HttpsURLConnection;
 
 import static android.support.constraint.Constraints.TAG;
 import static com.example.cqupt_on_hand.Register.Register.StuNum;
+import static com.example.cqupt_on_hand.Register.Register.day;
 
 
 /**
@@ -35,8 +36,6 @@ public class WeekFragment extends Fragment{
     static Integer[][][] id;
     ArrayList<Class_detail> class_details=new ArrayList<Class_detail>();
     private View view;
-    private static int[] date={5,3};
-    Calendar calendar=new Calendar();
     static JsonAnalyze jsonAnalyze =JsonAnalyze.newInstance();
     private  String[]titles = {"第一周","第二周","第三周","第四周","第五周","第六周","第七周","第八周","第九周","第十周","第十一周","第十二周","第十三周","第十四周","第十五周","第十六周","第十七周","第十八周","第十九周","第二十周","第二十一周","第二十二周","第二十三周","第二十四周","第二十五周"};
     private String title;
@@ -122,20 +121,13 @@ public class WeekFragment extends Fragment{
         TextView saturday=view.findViewById(R.id.sat_date);
         TextView sunday=view.findViewById(R.id.sun_date);
         TextView month=view.findViewById(R.id.month);
-        monday.setText(date[0]+"日");
-        date=calendar.addDate(date);
-        tuseday.setText(date[0]+"日");
-        date=calendar.addDate(date);
-        wednesday.setText(date[0]+"日");
-        date=calendar.addDate(date);
-        thursday.setText(date[0]+"日");
-        date=calendar.addDate(date);
-        friday.setText(date[0]+"日");
-        date=calendar.addDate(date);
-        saturday.setText(date[0]+"日");
-        date=calendar.addDate(date);
-        sunday.setText(date[0]+"日");
-        date=calendar.addDate(date);
-        month.setText(date[1]+"月");
+        monday.setText(day[week][0][0]+"日");
+        tuseday.setText(day[week][1][0]+"日");
+        wednesday.setText(day[week][2][0]+"日");
+        thursday.setText(day[week][3][0]+"日");
+        friday.setText(day[week][4][0]+"日");
+        saturday.setText(day[week][5][0]+"日");
+        sunday.setText(day[week][6][0]+"日");
+        month.setText(day[week][1][1]+"月");
     }
 }

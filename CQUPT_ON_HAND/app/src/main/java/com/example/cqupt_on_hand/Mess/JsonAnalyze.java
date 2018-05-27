@@ -38,6 +38,7 @@ public class JsonAnalyze {
             course.setStuNum(jsonObject.getString("stuNum"));
             course.setCachedTimestamp(jsonObject.getString("cachedTimestamp"));
             course.setOutOfDateTimestamp(jsonObject.getString("outOfDateTimestamp"));
+            course.setNowWeek(jsonObject.getString("nowWeek"));
             JSONArray jsonArray = new JSONArray(jsonObject.getString("data"));
             courses.add(course);
 
@@ -64,6 +65,7 @@ public class JsonAnalyze {
                     week[j]=weekArray.get(j).toString();
                 }
                 course.setWeek(week);
+
                 courses.add(course);
             }
             int day;
