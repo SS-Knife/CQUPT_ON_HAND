@@ -1,5 +1,7 @@
 package com.example.cqupt_on_hand.Body.Body_Navigation.Timetable_Mess;
 
+import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.example.cqupt_on_hand.Mess.Calendar;
@@ -33,6 +36,7 @@ import static com.example.cqupt_on_hand.Register.Register.day;
  */
 
 public class WeekFragment extends Fragment{
+    RecyclerAdapter recyclerAdapter;
     static Integer[][][] id;
     ArrayList<Class_detail> class_details=new ArrayList<Class_detail>();
     private View view;
@@ -106,7 +110,7 @@ public class WeekFragment extends Fragment{
         //此项用于更改recyclerview的内部布局方式；
         StaggeredGridLayoutManager staggeredGridLayoutManager=new StaggeredGridLayoutManager(7,StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setHasFixedSize(true);
-        RecyclerAdapter recyclerAdapter=new RecyclerAdapter(class_details,getContext());
+        recyclerAdapter=new RecyclerAdapter(class_details,getContext());
         recyclerView.addItemDecoration(new Decoration(7,0,true));
         recyclerView.setLayoutManager(staggeredGridLayoutManager);
         recyclerView.setAdapter(recyclerAdapter);
