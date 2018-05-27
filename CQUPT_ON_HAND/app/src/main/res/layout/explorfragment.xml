@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_white">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/triangle"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/gradient" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="发现"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="325dp"
+                android:layout_height="193dp"
+                android:layout_below="@+id/triangle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp">
+            </android.support.v4.view.ViewPager>
+
+            <RelativeLayout
+                android:layout_width="345dp"
+                android:layout_height="338dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="235dp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/emptyclassroom_d"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:background="@mipmap/p2" />
+
+                <TextView
+                    android:id="@+id/emptyclassroom_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/emptyclassroom_d"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="11dp"
+                    android:text="空教室"
+                    android:textColor="@color/text_grey"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/date_d"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_toLeftOf="@id/emptyclassroom_d"
+                    android:background="@mipmap/p1" />
+
+                <TextView
+                    android:id="@+id/date_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/date_d"
+                    android:layout_marginRight="70dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_toLeftOf="@id/emptyclassroom_t"
+                    android:text="没课约"
+                    android:textColor="@color/text_grey"
+                    android:textSize="13sp" />
+
+
+                <ImageView
+                    android:id="@+id/prize_d"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_toRightOf="@id/emptyclassroom_d"
+                    android:background="@mipmap/p3" />
+
+                <TextView
+                    android:id="@+id/prize_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/date_d"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_toRightOf="@id/emptyclassroom_t"
+                    android:text="成绩单"
+                    android:textColor="@color/text_grey"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/map_d"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/prize_t"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@mipmap/p5" />
+
+                <TextView
+                    android:id="@+id/map_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/map_d"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="11dp"
+                    android:text="重邮地图"
+                    android:textColor="@color/text_grey"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/voluntary_d"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/prize_t"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toLeftOf="@id/map_d"
+                    android:background="@mipmap/p4" />
+
+                <TextView
+                    android:id="@+id/voluntary_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/voluntary_d"
+                    android:layout_marginRight="55dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_toLeftOf="@id/map_t"
+                    android:text="志愿时长"
+                    android:textColor="@color/text_grey"
+                    android:textSize="13sp" />
+
+
+                <ImageView
+                    android:id="@+id/remind_d"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/prize_t"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@id/emptyclassroom_d"
+                    android:background="@mipmap/p6" />
+
+                <TextView
+                    android:id="@+id/remind_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/remind_d"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_toRightOf="@id/emptyclassroom_t"
+                    android:text="课前提醒"
+                    android:textColor="@color/text_grey"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/calendar_d"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/remind_t"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toLeftOf="@id/map_d"
+                    android:background="@mipmap/p7" />
+
+                <TextView
+                    android:id="@+id/calendar_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/calendar_d"
+                    android:layout_marginRight="70dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_toLeftOf="@id/map_t"
+                    android:text="校历"
+                    android:textColor="@color/text_grey"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/electric_d"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/remind_t"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@mipmap/p8" />
+
+                <TextView
+                    android:id="@+id/electric_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/redrock_t"
+                    android:layout_alignBottom="@+id/redrock_t"
+                    android:layout_alignLeft="@+id/emptyclassroom_t"
+                    android:layout_alignStart="@+id/emptyclassroom_t"
+                    android:text="查电费"
+                    android:textColor="@color/text_grey"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/redrock_d"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/remind_t"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@id/emptyclassroom_d"
+                    android:background="@mipmap/p9" />
+
+                <TextView
+                    android:id="@+id/redrock_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/redrock_d"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_toRightOf="@id/emptyclassroom_t"
+                    android:text="关于红岩"
+                    android:textColor="@color/text_grey"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

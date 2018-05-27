@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/gradient"
+        android:id="@+id/triangle"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="17sp"
+        android:id="@+id/week"
+        android:text="本周"/>
+
+    <ImageView
+        android:layout_width="9dp"
+        android:layout_height="5dp"
+        android:layout_toRightOf="@id/week"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="42dp"
+        android:background="@mipmap/shangjiantou"/>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/pluscircle"
+        android:layout_toRightOf="@id/week"
+        android:layout_marginLeft="126dp"
+        android:layout_marginTop="30dp"
+        android:background="@mipmap/pluscircle"/>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/triangle"
+        android:layout_height="39dp"
+        app:tabTextColor="@color/text_grey"
+        app:tabSelectedTextColor="@color/app_blue"
+        app:tabIndicatorHeight="1dp"
+        app:tabIndicatorColor="@color/colorPrimary" />
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tablayout"
+        android:id="@+id/weekviewpager">
+    </android.support.v4.view.ViewPager>
+</RelativeLayout>
